@@ -1,0 +1,174 @@
+Automatisoidut testit:
+
+Käännetään main.c...
+Kääntäminen onnistui.
+
+Testitapaus 1: Toimintovalikko avautuu, saldo näkyy
+Syota tilinumero: Syota PIN-koodi: 
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Kiitos, etta kaytit automaattia. Hyvaa paivan jatkoa!
+
+---
+Testitapaus 2: Virheellinen PIN-koodi
+Syota tilinumero: Syota PIN-koodi: Vaarin syotetty PIN-koodi.
+Ohjelma paattyy virheellisen syotteen vuoksi.
+
+---
+Testitapaus 3: Tilitiedostoa ei löydy
+Syota tilinumero: Syota PIN-koodi: Tilitiedostoa ei voitu avata. Tarkista tilinumero.
+Ohjelma paattyy virheellisen syotteen vuoksi.
+
+---
+Testitapaus 4: Nostetaan 50 euroa, saldo vähenee
+Syota tilinumero: Syota PIN-koodi: 
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Syota nostettava summa (20-1000 euroa, 10 euron valein): Nostit 50 euroa. Jaljella oleva saldo: 2250 euroa
+
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Kiitos, etta kaytit automaattia. Hyvaa paivan jatkoa!
+
+---
+Testitapaus 5: Nostetaan virheellinen summa (15 euroa)
+Syota tilinumero: Syota PIN-koodi: 
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Syota nostettava summa (20-1000 euroa, 10 euron valein): Virheellinen summa. Voit nostaa vain 20-1000 euroa, 10 euron valein.
+
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Kiitos, etta kaytit automaattia. Hyvaa paivan jatkoa!
+
+---
+Testitapaus 6: Nostetaan liian suuri summa (5000 euroa)
+Syota tilinumero: Syota PIN-koodi: 
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Syota nostettava summa (20-1000 euroa, 10 euron valein): Virheellinen summa. Voit nostaa vain 20-1000 euroa, 10 euron valein.
+
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Kiitos, etta kaytit automaattia. Hyvaa paivan jatkoa!
+
+---
+Testitapaus 7: Talletetaan 200 euroa
+Syota tilinumero: Syota PIN-koodi: 
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Syota talletettava summa: Talletit 200 euroa. Uusi saldo: 2450 euroa
+
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Kiitos, etta kaytit automaattia. Hyvaa paivan jatkoa!
+
+---
+Testitapaus 8: Lopetus, saldo tallentuu
+Syota tilinumero: Syota PIN-koodi: 
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Kiitos, etta kaytit automaattia. Hyvaa paivan jatkoa!
+
+---
+Testitapaus 9: Virheellinen PIN-koodi (kirjaimia syötetty)
+Syota tilinumero: Syota PIN-koodi: Vaarin syotetty PIN-koodi.
+Ohjelma paattyy virheellisen syotteen vuoksi.
+
+---
+Testitapaus 10: Nostetaan kirjaimia syötteeksi
+Syota tilinumero: Syota PIN-koodi: 
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Syota nostettava summa (20-1000 euroa, 10 euron valein): Virheellinen syote. Syota positiivinen kokonaisluku.
+
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Kiitos, etta kaytit automaattia. Hyvaa paivan jatkoa!
+
+---
+Testitapaus 11: Tyhjä tilinumero
+Syota tilinumero: Syota PIN-koodi: Tilitiedostoa ei voitu avata. Tarkista tilinumero.
+Ohjelma paattyy virheellisen syotteen vuoksi.
+
+---
+Testitapaus 12: Tyhjä PIN-koodi
+Syota tilinumero: Syota PIN-koodi: Vaarin syotetty PIN-koodi.
+Ohjelma paattyy virheellisen syotteen vuoksi.
+
+---
+Testitapaus 13: Virheellinen tilinumero ja PIN-koodi
+Syota tilinumero: Syota PIN-koodi: Tilitiedostoa ei voitu avata. Tarkista tilinumero.
+Ohjelma paattyy virheellisen syotteen vuoksi.
+
+---
+Testitapaus 14: Nostetaan virheellinen syöte (kirjaimia)
+Syota tilinumero: Syota PIN-koodi: 
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Syota nostettava summa (20-1000 euroa, 10 euron valein): Virheellinen syote. Syota positiivinen kokonaisluku.
+
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Kiitos, etta kaytit automaattia. Hyvaa paivan jatkoa!
+
+---
+Testitapaus 15: Negatiivinen talletus ei ole sallittu
+Syota tilinumero: Syota PIN-koodi: 
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Syota talletettava summa: Virheellinen syote. Syota positiivinen kokonaisluku.
+
+Valitse toiminto:
+1. Tarkista saldo
+2. Nosta rahaa
+3. Talleta rahaa
+4. Lopeta
+Valintasi: Kiitos, etta kaytit automaattia. Hyvaa paivan jatkoa!
+
+---

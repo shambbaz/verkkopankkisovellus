@@ -1,0 +1,3 @@
+Testitapaus 1: Toimintovalikko avautuu
+Testitapaus 2: Virheellinen PIN
+Testit suoritettu.

@@ -1,0 +1,67 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install GCC
+        run: sudo apt-get update && sudo apt-get install -y build-essential
+
+      - name: Build project
+        run: gcc main.c -o ohjelma.exe
+
+      - name: Run tests
+        run: python3 run_tests.py
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: testit.txt
+
+      - name: Create GitHub Release
+  id: create_release
+  uses: actions/create-release@v1
+  with:
+    tag_name: v1.0.2 # Päivitä seuraavaan versioon
+    release_name: "Version 1.0.2"
+    body: |
+      Tämä julkaisu sisältää ohjelma.exe-tiedoston.
+    draft: false
+    prerelease: false
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+- name: Create GitHub Release
+  id: create_release
+  uses: actions/create-release@v1
+  with:
+    tag_name: v1.0.2 # Päivitä seuraavaan versioon
+    release_name: "Version 1.0.2"
+    body: |
+      Tämä julkaisu sisältää ohjelma.exe-tiedoston.
+    draft: false
+    prerelease: false
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+- name: Upload Release Asset
+  uses: actions/upload-release-asset@v1
+  with:
+    upload_url: ${{ steps.create_release.outputs.upload_url }}
+    asset_path: ./ohjelma.exe
+    asset_name: ohjelma.exe
+    asset_content_type: application/octet-stream
